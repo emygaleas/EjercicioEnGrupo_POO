@@ -14,9 +14,8 @@ public class Producto {
         this.descuento = descuento;
     }
 
-    public double calcularDescuento() {
+    public void calcularDescuento() {
         descuento = precio * (descuento / 100) * cant_prod;
         System.out.println("El descuento del producto: " + descuento);
-        return descuento;
     }
 }
