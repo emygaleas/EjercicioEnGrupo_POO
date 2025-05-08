@@ -30,5 +30,6 @@ public class Main {
 
             productos[i] = new Producto(nombre, precio, cant_total, descuento);
         }
+
     }
 }
