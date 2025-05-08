@@ -9,12 +9,12 @@ public class Main {
 
         Producto[] productos = new Producto[cantidad];
         for (int i = 0; i < cantidad; i++) {
-
-            System.out.println("Ingrese el nombre del producto: ");
+            System.out.printf("\n--------- Producto " + (i + 1) + "--------\n");
+            System.out.printf("Ingrese el nombre del producto: ");
             String nombre = SC.next();
-            System.out.println("Ingrese el precio del producto: ");
+            System.out.printf("Ingrese el precio del producto: ");
             double precio = SC.nextDouble();
-            System.out.println("Ingrese la cantidad del producto: ");
+            System.out.printf("Ingrese la cantidad del producto: ");
             int cant_total = SC.nextInt();
             System.out.printf("¿Su producto tiene descuento? (si/no): ");
             String opc = SC.next();
