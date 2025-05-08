@@ -22,6 +22,8 @@ public class Main {
             if (opc.equals("si")) {
                 System.out.printf("Ingrese el descuento del producto: ");
                 double descuento = SC.nextDouble();
+                productos[i] = new Producto(descuento);
+                productos[i].calcularDescuento();
             }
 
             productos[i] = new Producto(nombre, precio, cant_total);
