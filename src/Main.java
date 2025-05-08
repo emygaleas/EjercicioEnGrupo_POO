@@ -15,6 +15,13 @@ public class Main {
             String nombre = SC.next();
             System.out.printf("Ingrese el precio del producto: ");
             double precio = SC.nextDouble();
+            // Validación de la cantidad y precio positivos
+            while (precio <= 0) {
+                System.out.println("solo se permiten numeros positivos.");
+                System.out.print("Precio del producto: ");
+                precio = SC.nextDouble();
+            }
+            
             System.out.printf("Ingrese la cantidad del producto: ");
             int cant_total = SC.nextInt();
             System.out.printf("¿Su producto tiene descuento? (si/no): ");
@@ -27,6 +34,7 @@ public class Main {
                     descuento = SC.nextDouble();
                 } while (descuento < 0 || descuento > 100);
             }
+
 
             productos[i] = new Producto(nombre, precio, cant_total, descuento);
         }
