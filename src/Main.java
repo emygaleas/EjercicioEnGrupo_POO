@@ -15,16 +15,18 @@ public class Main {
             System.out.println("Ingrese el precio del producto: ");
             double precio = SC.nextDouble();
             System.out.println("Ingrese la cantidad del producto: ");
-            int cant_total = SC.nextInt();
+            int cant_prod = SC.nextInt();
             System.out.printf("¿Su producto tiene descuento? (si/no): ");
             String opc = SC.next();
 
             if (opc.equals("si")) {
                 System.out.printf("Ingrese el descuento del producto: ");
                 double descuento = SC.nextDouble();
+                productos[i] = new Producto(descuento);
+                productos[i].calcularDescuento();
             }
 
-            productos[i] = new Producto(nombre, precio, cant_total);
+            productos[i] = new Producto(nombre, precio, cant_prod);
         }
     }
 }
